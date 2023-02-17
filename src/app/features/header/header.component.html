@@ -1,0 +1,19 @@
+<nav class="navbar app-header" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <app-header-logo></app-header-logo>
+        <app-header-mobile-burger></app-header-mobile-burger>
+    </div>
+	<div id="navbarBasicExample" class="navbar-menu">
+		<div class="navbar-start">
+			<app-header-page-button
+				*ngFor="let page of pageArray"
+				[pageIcon]="page.pageIcon"
+				[pageTitle]="page.pageTitle"
+				[pageUrl]="page.pageUrl"></app-header-page-button>
+		</div>
+		<div class="navbar-end">
+			<app-header-no-user *ngIf="!isUserLoggedIn"></app-header-no-user>
+			<app-header-user *ngIf="isUserLoggedIn"></app-header-user>
+		</div>
+	</div>
+</nav>
