@@ -32,7 +32,10 @@
             "styles": [
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "node_modules/bulma/bulma.sass",
-              "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
+              "src/assets/fontawesome/scss/fontawesome.scss",
+              "src/assets/fontawesome/scss/solid.scss",
+              "src/assets/fontawesome/scss/regular.scss",
+              "src/assets/fontawesome/scss/brands.scss",
               "src/styles.scss"
             ],
             "scripts": []

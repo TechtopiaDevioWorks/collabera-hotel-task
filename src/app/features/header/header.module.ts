@@ -9,13 +9,18 @@ import { HeaderUserComponent } from './features/header-user/header-user.componen
 import { HeaderUserPanelComponent } from './features/header-user-panel/header-user-panel.component';
 import { HeaderMobileBurgerComponent } from './features/header-mobile-burger/header-mobile-burger.component';
 import { CoreModule } from '@core/core.module';
-import { HeaderPageDropdownComponent } from './features/header-page-dropdown/header-page-dropdown.component';
 
 @NgModule({
-  declarations: [HeaderComponent, HeaderPageButtonComponent, HeaderLogoComponent, HeaderNoUserComponent, HeaderUserComponent, HeaderUserPanelComponent, HeaderMobileBurgerComponent, HeaderPageDropdownComponent],
-  imports: [
-    CommonModule, CoreModule
-  ],
-  exports: [HeaderComponent]
+	declarations: [
+		HeaderComponent,
+		HeaderPageButtonComponent,
+		HeaderLogoComponent,
+		HeaderNoUserComponent,
+		HeaderUserComponent,
+		HeaderUserPanelComponent,
+		HeaderMobileBurgerComponent,
+	],
+	imports: [CommonModule, CoreModule],
+	exports: [HeaderComponent],
 })
-export class HeaderModule { }
+export class HeaderModule {}

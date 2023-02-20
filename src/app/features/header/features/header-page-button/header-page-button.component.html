@@ -1,6 +1,27 @@
-<a class="navbar-item is-tab" [routerLink]="pageUrl" routerLinkActive="is-active">
-    <span class="icon has-text-primary">
-        <i [class]="pageIcon"></i>
-    </span>
-    <span>{{pageTitle}}</span>
-</a>
+<ng-container *ngIf="headerButton">
+    <ng-container *ngIf="(headerButton.items && headerButton.items.length > 0); else normalButton">
+        <a class="navbar-item has-dropdown is-tab-dropdown" [class.is-tab]="primaryButton" [class.navbar-item-secondary]="!primaryButton"
+        [class.is-hoverable]="primaryButton"
+        (mouseenter)="dropdownActive = true" (mouseleave)="dropdownActive = false">
+            <a class="navbar-link" [routerLink]="headerButton.url" routerLinkActive="is-dropdown-tab-active">
+                <span class="icon has-text-primary">
+                    <i [class]="headerButton.icon"></i>
+                </span>
+                <span>{{ headerButton.title }}</span>
+              </a>
+              <div [ngClass]="primaryButton ? 'navbar-dropdown' : 'navbar-dropdown-secondary'" [class.navbar-dropdown-secondary-active]="dropdownActive && primaryButton" [class.is-active]="dropdownActive">
+                <app-header-page-button *ngFor="let item of headerButton.items" [headerButton]="item"></app-header-page-button>
+              </div>
+              <hr class="navbar-divider">
+        </a>
+    </ng-container>
+
+    <ng-template #normalButton>
+        <a class="navbar-item" [routerLink]="headerButton.url" routerLinkActive="is-active" [class.is-tab]="primaryButton">
+            <span class="icon has-text-primary">
+                <i [class]="headerButton.icon"></i>
+            </span>
+            <span>{{ headerButton.title }}</span>
+        </a>
+    </ng-template>
+</ng-container>

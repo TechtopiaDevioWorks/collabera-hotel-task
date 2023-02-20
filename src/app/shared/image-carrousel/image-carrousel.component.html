@@ -1,0 +1,14 @@
+<div class="container is-fluid carrousel-container">
+    <div class="slide fade" [class.slide-active]="slideIndex===0">
+        <figure class="image is-16by9">
+            <img src="https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-preview.jpg">
+        </figure>
+    </div>
+    <div class="slide fade" [class.slide-active]="slideIndex===1">
+        <figure class="image is-16by9">
+            <img src="https://c4.wallpaperflare.com/wallpaper/297/18/527/digital-art-artwork-illustration-science-fiction-planet-hd-wallpaper-preview.jpg">
+        </figure>
+    </div>
+    <a class="prev" (click)="changeSlide(slideIndex-1)">&#10094;</a>
+    <a class="next" (click)="changeSlide(slideIndex+1)">&#10095;</a>
+</div>
