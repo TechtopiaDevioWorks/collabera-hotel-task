@@ -47,10 +47,13 @@ const routes: Routes = [
 		path: 'wellness',
 		loadChildren: () => import('./pages/wellness-page/wellness-page.module').then((m) => m.WellnessPageModule),
 	},
-
+	{
+		path: 'not-found',
+		loadChildren: () => import('./pages/not-found-page/not-found-page.module').then((m) => m.NotFoundPageModule),
+	},
 	{
 		path: '**',
-		loadChildren: () => import('./pages/not-found-page/not-found-page.module').then((m) => m.NotFoundPageModule),
+		redirectTo: 'not-found',
 	},
 ];
 

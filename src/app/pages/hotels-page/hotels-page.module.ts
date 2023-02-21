@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HotelsPageRoutingModule } from './hotels-page-routing.module';
 import { HotelsPageComponent } from './hotels-page.component';
 import { LayoutModule } from '@features/layout/layout.module';
+import { DiscoverMoreContainerModule } from '@shared/discover-more-container/discover-more-container.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { LayoutModule } from '@features/layout/layout.module';
   imports: [
     CommonModule,
     HotelsPageRoutingModule,
-    LayoutModule
+    LayoutModule,
+    DiscoverMoreContainerModule
   ]
 })
 export class HotelsPageModule { }
