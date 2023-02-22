@@ -1,3 +1,5 @@
+import { Params } from "@angular/router";
+
 export interface HeaderButton{
     title: string;
     icon?: string;
@@ -9,4 +11,5 @@ export interface HeaderButton{
 export interface RoutingButton {
     text: string;
     url: string;
+    urlParams?:Params;
 }

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ContactPageRoutingModule } from './contact-page-routing.module';
 import { ContactPageComponent } from './contact-page.component';
 import { LayoutModule } from '@features/layout/layout.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { LayoutModule } from '@features/layout/layout.module';
   imports: [
     CommonModule,
     ContactPageRoutingModule,
-    LayoutModule
+    LayoutModule,
+    ReactiveFormsModule
   ]
 })
 export class ContactPageModule { }

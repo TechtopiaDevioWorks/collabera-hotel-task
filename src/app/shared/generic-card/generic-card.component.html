@@ -24,7 +24,7 @@
 
 	<footer class="card-footer" *ngIf="buttons" [class.mt-auto]="!description2">
 		<ng-container *ngFor="let item of buttons">
-			<a [routerLink]="item.url" class="card-footer-item">{{ item.text }}</a>
+			<a [routerLink]="item.url" [queryParams]="item.urlParams" class="card-footer-item">{{ item.text }}</a>
 		</ng-container>
 	</footer>
 </div>

@@ -1,3 +1,135 @@
 <app-layout>
-    <p>reserve-now-page works!</p>
+	<div class="container is-max-desktop m-auto p-2" >
+		<form [formGroup]="reserveForm" (ngSubmit)="onSubmit()">
+			<div class="field">
+				<label class="label">First name</label>
+				<div class="control">
+					<input
+						class="input"
+						type="text"
+						placeholder="John"
+						formControlName="firstName"
+						[class.is-danger]="
+							this.reserveForm.get('firstName')?.errors && !this.reserveForm.get('firstName')?.pristine
+						" />
+				</div>
+				<p
+					class="help is-danger"
+					*ngIf="!this.reserveForm.get('firstName')?.pristine && this.reserveForm.get('firstName')?.hasError('required')">
+					First name is required.
+				</p>
+				<p
+					class="help is-danger"
+					*ngIf="!this.reserveForm.get('firstName')?.pristine && (this.reserveForm.get('firstName')?.hasError('maxlength') || this.reserveForm.get('firstName')?.hasError('minlength'))">
+					First name must be between 2 and 25 characters.
+				</p>
+			</div>
+			<div class="field">
+				<label class="label">Last name</label>
+				<div class="control">
+					<input
+						class="input"
+						type="text"
+						placeholder="Doe"
+						formControlName="lastName"
+						[class.is-danger]="
+							this.reserveForm.get('lastName')?.errors && !this.reserveForm.get('lastName')?.pristine
+						" />
+				</div>
+        <p
+        class="help is-danger"
+        *ngIf="!this.reserveForm.get('lastName')?.pristine && this.reserveForm.get('lastName')?.hasError('required')">
+        Last name is required.
+      </p>
+      <p
+        class="help is-danger"
+        *ngIf="!this.reserveForm.get('lastName')?.pristine && (this.reserveForm.get('lastName')?.hasError('maxlength') || this.reserveForm.get('lastName')?.hasError('minlength'))">
+        Last name must be between 2 and 25 characters.
+      </p>
+			</div>
+			<div class="field">
+				<label class="label">Email</label>
+				<div class="control has-icons-left has-icons-right">
+					<input
+						class="input"
+						type="email"
+						placeholder="john.doe@company.com"
+						formControlName="email"
+						[class.is-danger]="this.reserveForm.get('email')?.errors && !this.reserveForm.get('email')?.pristine" />
+					<span class="icon is-small is-left">
+						<i class="fas fa-envelope"></i>
+					</span>
+					<span class="icon is-small is-right">
+						<i
+							class="fas fa-exclamation-triangle"
+							*ngIf="this.reserveForm.get('email')?.errors && !this.reserveForm.get('email')?.pristine"></i>
+					</span>
+				</div>
+				<p
+					class="help is-danger"
+					*ngIf="!this.reserveForm.get('email')?.pristine && this.reserveForm.get('email')?.hasError('required')">
+					Email is required.
+				</p>
+				<p
+					class="help is-danger"
+					*ngIf="!this.reserveForm.get('email')?.pristine && this.reserveForm.get('email')?.hasError('email')">
+					Email is invalid.
+				</p>
+			</div>
+            <div class="field">
+                <label class="label">Hotel</label>
+                <div class="control">
+                    <div class="select">
+                    <select formControlName="hotel">
+                        <option>Select dropdown</option>
+                        <option>With options</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Room</label>
+                <div class="control">
+                    <div class="select">
+                    <select formControlName="room">
+                        <option>Select dropdown</option>
+                        <option>With options</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Date range</label>
+                <div class="control has-icons-left">
+                    <mat-date-range-input [rangePicker]="picker" [formGroup]="reserveForm" class="input" [min]="minDate">
+                        <input matStartDate formControlName="startDate" placeholder="Start Date">
+                        <input matEndDate formControlName="endDate" placeholder="End Date">
+                    </mat-date-range-input>
+                    <span class="icon is-small is-left">
+						<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                         <mat-date-range-picker #picker></mat-date-range-picker>
+					</span>
+
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Payment</label>
+                <div class="control">
+                    <label class="radio">
+                      <input type="radio" formControlName="payment" value="online">
+                      Online
+                    </label>
+                    <label class="radio">
+                      <input type="radio" formControlName="payment" value="cash">
+                      Cash
+                    </label>
+                </div>
+            </div>
+			<div class="field is-grouped">
+				<div class="control">
+					<button type="submit" class="button is-link" [disabled]="!reserveForm.valid">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
 </app-layout>

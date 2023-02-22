@@ -13,7 +13,8 @@ export class CarrerService {
       "buttons": [
         {
           "text": "Apply Now",
-          "url": "https://www.example.com/careers/executive-chef"
+          "url": "/contact",
+          "urlParams":{subject: '[JOB]Desert Oasis Resort & Spa - Executive Chef'}
         }
       ]
     },
@@ -24,7 +25,8 @@ export class CarrerService {
       "buttons": [
         {
           "text": "Apply Now",
-          "url": "https://www.example.com/careers/director-of-sales"
+          "url": "/contact",
+          "urlParams":{subject: '[JOB]Zen Garden Resort & Spa - Director of Sales'}
         }
       ]
     },
@@ -35,7 +37,8 @@ export class CarrerService {
       "buttons": [
         {
           "text": "Apply Now",
-          "url": "https://www.example.com/careers/housekeeping-manager"
+          "url": "/contact",
+          "urlParams":{subject: '[JOB]Tropicana Island Resort - Housekeeping Manager'}
         }
       ]
     },
@@ -46,7 +49,8 @@ export class CarrerService {
       "buttons": [
         {
           "text": "Apply Now",
-          "url": "https://www.example.com/careers/front-desk-supervisor"
+          "url": "/contact",
+          "urlParams":{subject: '[JOB]Alhambra Palace Hotel - Front Desk Supervisor'}
         }
       ]
     },
@@ -57,7 +61,8 @@ export class CarrerService {
       "buttons": [
         {
           "text": "Apply Now",
-          "url": "https://www.example.com/careers/event-coordinator"
+          "url": "/contact",
+          "urlParams":{subject: '[JOB]Zen Garden Resort & Spa - Event Coordinator'}
         }
       ]
     },
@@ -68,7 +73,8 @@ export class CarrerService {
       "buttons": [
         {
           "text": "Apply Now",
-          "url": "https://www.example.com/careers/sous-chef"
+          "url": "/contact",
+          "urlParams":{subject: '[JOB]Alhambra Palace Hotel - Sous Chef'}
         }
       ]
     },
@@ -79,7 +85,8 @@ export class CarrerService {
       "buttons": [
         {
           "text": "Apply Now",
-          "url": "https://www.example.com/careers/assistant-spa-manager"
+          "url": "/contact",
+          "urlParams":{subject: '[JOB]Tropicana Island Resort - Assistant Spa Manager'}
         }
       ]
     },
