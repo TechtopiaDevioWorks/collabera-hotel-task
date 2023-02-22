@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { StayPageRoutingModule } from './stay-page-routing.module';
 import { StayPageComponent } from './stay-page.component';
 import { LayoutModule } from '@features/layout/layout.module';
+import { CoreModule } from '@core/core.module';
+import { DiscoverMoreContainerModule } from '@shared/discover-more-container/discover-more-container.module';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { LayoutModule } from '@features/layout/layout.module';
   imports: [
     CommonModule,
     StayPageRoutingModule,
-    LayoutModule
+    LayoutModule,
+    CoreModule,
+    DiscoverMoreContainerModule
   ]
 })
 export class StayPageModule { }

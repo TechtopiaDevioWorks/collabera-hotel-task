@@ -1,0 +1,10 @@
+<app-layout>
+    <ng-container *ngFor="let item of currentDiningData?.info;let odd=odd">
+        <app-discover-more-container
+            [textLocation]="odd ? 'left': 'right'"
+            [overheading]="item.overheading"
+            [imgUrl]="item.imgUrl"
+            [heading]="item.heading"
+            [description]="item.description"></app-discover-more-container>
+    </ng-container>
+</app-layout>

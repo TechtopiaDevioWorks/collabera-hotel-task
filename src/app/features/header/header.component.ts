@@ -56,15 +56,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
 				{ url: '/dining/fine', title: 'Fine dining' },
 			],
 		},
-		{
-			title: 'Wellness',
-			icon: 'fa-solid fa-dumbbell ',
-			url: '/wellness',
-			items: [
-				{ url: '/wellness/pool', title: 'Pool' },
-				{ url: '/wellness/gym', title: 'Gym' },
-			],
-		},
 		{ title: 'Offers', icon: 'fa-solid fa-star', url: '/offers' },
 		{ title: 'About', icon: 'fa-solid fa-address-card', url: '/about' },
 		{ title: 'Contact', icon: 'fa-solid fa-envelope', url: '/contact' },

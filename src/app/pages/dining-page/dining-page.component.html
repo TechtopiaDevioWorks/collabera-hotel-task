@@ -1,3 +1,10 @@
 <app-layout>
-    <p>dining-page works!</p>
-</app-layout>
+    <ng-container *ngFor="let item of diningOptionList;let odd=odd">
+        <app-discover-more-container
+            [textLocation]="odd ? 'left': 'right'"
+            [imgUrl]="item.imgUrl"
+            [heading]="item.diningName"
+            [buttonRoute]="item.dining"
+            [description]="item.description"></app-discover-more-container>
+    </ng-container>
+    </app-layout>

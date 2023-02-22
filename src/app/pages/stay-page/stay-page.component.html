@@ -1,3 +1,10 @@
 <app-layout>
-<p>stay-page works!</p>
+    <ng-container *ngFor="let item of currentStayData?.info;let odd=odd">
+        <app-discover-more-container
+            [textLocation]="odd ? 'left': 'right'"
+            [overheading]="item.overheading"
+            [imgUrl]="item.imgUrl"
+            [heading]="item.heading"
+            [description]="item.description"></app-discover-more-container>
+    </ng-container>
 </app-layout>

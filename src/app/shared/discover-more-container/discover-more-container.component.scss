@@ -34,9 +34,9 @@
 		left: 50%;
 		transform: translate(0, -50%);
 		right: 0;
-		width: 50%;
-		height: 50%;
+
         -webkit-text-stroke: 0.05vw black;
+        z-index: 10;
         .information-overtitle {
             font-size:1.8vw;
             line-height: 2vw;
@@ -74,6 +74,12 @@
 		transform: translate(0, -50%);
 		right: 50%;
     }
+    .information-container-middle {
+        left: 0;
+        right: 0;
+        text-align: center;
+        transform: translate(0%, 25%);
+    }
 }
 
 @media screen and (max-width: 1023px) {
@@ -87,6 +93,7 @@
 		height: 75% ;
         margin:auto;
         -webkit-text-stroke: 0.1vw black;
+        z-index: 10;
         .information-overtitle {
             font-size:2.8vw;
             line-height: 3vw;

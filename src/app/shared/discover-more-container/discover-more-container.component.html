@@ -1,13 +1,13 @@
 <div class="container is-fluid discover-more-container">
 	<div class="gradient-container-top"></div>
-	<div class="information-container" [class.information-container-left]="textLocation === 'left'">
+	<div class="information-container" [class.information-container-left]="textLocation === 'left'" [class.information-container-middle]="textLocation === 'middle'">
 		<h6 class="information-overtitle" [style.color]="textColor" *ngIf="overheading">{{overheading}}</h6>
 		<h1 class="information-title" [style.color]="textColor" *ngIf="heading">{{heading}}</h1>
 		<h3 class="information-subtitle" [style.color]="textColor" *ngIf="subheading">{{subheading}}</h3>
 		<p class="information-description" [style.color]="textColor" *ngIf="description">
             {{description}}
 		</p>
-		<button class="button is-light is-large information-button" [routerLink]="buttonRoute" *ngIf="buttonRoute">
+		<button class="button is-light is-large is-outlined information-button" [routerLink]="buttonRoute" *ngIf="buttonRoute">
 			Discover
 		</button>
 	</div>

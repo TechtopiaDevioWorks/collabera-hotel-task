@@ -1,3 +1,13 @@
 <app-layout>
-	<p>offers-page works!</p>
+	<div class="container is-fluid is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-center">
+		<app-offer-card
+			*ngFor="let item of offersList"
+			[heading]="item.title"
+			[subheading]="item.dates"
+			[description]="item.description"
+			[buttons]="item.buttons"
+			[description2]="item.price"
+			[description2Old]="item.oldprice">
+		</app-offer-card>
+	</div>
 </app-layout>

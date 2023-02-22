@@ -5,3 +5,8 @@ export interface HeaderButton{
     urlParams?: string;
     items?: HeaderButton[]
 }
+
+export interface RoutingButton {
+    text: string;
+    url: string;
+}

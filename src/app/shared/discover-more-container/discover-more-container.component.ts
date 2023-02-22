@@ -7,12 +7,12 @@ import { Input } from '@angular/core';
 	styleUrls: ['./discover-more-container.component.scss'],
 })
 export class DiscoverMoreContainerComponent {
-	@Input() textLocation: 'right' | 'left' = 'right';
-	@Input() overheading: string | null = null;
-	@Input() heading: string | null = null;
-	@Input() subheading: string | null = null;
-	@Input() description: string | null = null;
-	@Input() buttonRoute: string | null = null;
-  @Input() textColor: string = 'antiquewhite';
-  @Input() imgUrl: string | null = null;
+	@Input() textLocation: 'right' | 'left' | 'middle' = 'right';
+	@Input() overheading: string | undefined;
+	@Input() heading: string | undefined;
+	@Input() subheading: string | undefined;
+	@Input() description: string | undefined;
+	@Input() buttonRoute: string | undefined;
+	@Input() textColor: string = 'antiquewhite';
+	@Input() imgUrl: string | undefined;
 }

@@ -1,0 +1,30 @@
+<div class="card m-2 is-flex is-flex-direction-column" style="width: 300px">
+	<div style="height: 150px; width: 180px" class="d-flex m-auto" *ngIf="imgUrl">
+		<img [src]="imgUrl" class="card-img-top p-2 m-auto border" />
+	</div>
+	<div class="card-content">
+		<div class="media-content">
+			<h5 class="title is-4" *ngIf="heading">{{ heading }}</h5>
+			<h6 class="subtitle is-6" *ngIf="subheading">{{ subheading }}</h6>
+		</div>
+		<div class="content">
+			<p class="card-text" *ngIf="description">{{ description }}</p>
+		</div>
+	</div>
+    <div class="card-content p-0 mt-auto" *ngIf="description2Old" style="text-decoration: line-through;">
+		<div class="content mt-auto">
+			<p class="card-text has-text-centered has-text-weight-semibold">{{ description2Old }}</p>
+		</div>
+	</div>
+	<div class="card-content p-0 mt-auto" *ngIf="description2">
+		<div class="content mt-auto">
+			<p class="card-text has-text-centered has-text-weight-semibold">{{ description2 }}</p>
+		</div>
+	</div>
+
+	<footer class="card-footer" *ngIf="buttons" [class.mt-auto]="!description2">
+		<ng-container *ngFor="let item of buttons">
+			<a [routerLink]="item.url" class="card-footer-item">{{ item.text }}</a>
+		</ng-container>
+	</footer>
+</div>

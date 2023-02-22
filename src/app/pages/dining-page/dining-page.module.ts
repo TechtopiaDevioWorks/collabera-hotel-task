@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DiningPageRoutingModule } from './dining-page-routing.module';
 import { DiningPageComponent } from './dining-page.component';
 import { LayoutModule } from '@features/layout/layout.module';
+import { DiscoverMoreContainerModule } from '@shared/discover-more-container/discover-more-container.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { LayoutModule } from '@features/layout/layout.module';
   imports: [
     CommonModule,
     DiningPageRoutingModule,
-    LayoutModule
+    LayoutModule,
+    DiscoverMoreContainerModule
   ]
 })
 export class DiningPageModule { }
