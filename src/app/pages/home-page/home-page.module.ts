@@ -4,16 +4,15 @@ import { CommonModule } from '@angular/common';
 import { HomePageRoutingModule } from './home-page-routing.module';
 import { HomePageComponent } from './home-page.component';
 import { LayoutModule } from '@features/layout/layout.module';
-import { ImageCarrouselModule } from '@shared/image-carrousel/image-carrousel.module';
+import { HomeCardComponent } from './features/home-card/home-card.component';
 
 
 @NgModule({
-  declarations: [HomePageComponent],
+  declarations: [HomePageComponent, HomeCardComponent],
   imports: [
     CommonModule,
     HomePageRoutingModule,
     LayoutModule,
-    ImageCarrouselModule,
   ]
 })
 export class HomePageModule { }

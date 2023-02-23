@@ -1,0 +1,27 @@
+:host {
+    margin: 2rem;
+}
+
+.card:hover {
+    transform: scale(1.25);
+
+}
+
+.card {
+    min-width: 300px;
+    min-height: 350px;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    transform-origin: center;
+    cursor: pointer;
+    .card-image {
+        height: 275px;
+        display: flex;
+        padding: 0.5rem;
+        img {
+            height: 100%;
+            width: auto;
+            margin: auto;
+        }
+    }   
+}

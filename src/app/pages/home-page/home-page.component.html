@@ -1,3 +1,34 @@
 <app-layout>
-    <app-image-carrousel></app-image-carrousel>
+	<div class="container is-fluid is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-around">
+		<div class="banner-container">
+			<div class="gradient-container-top"></div>
+			<div class="information-container">
+				<h1 class="information-title">My hotel Group</h1>
+			</div>
+			<img
+				src="https://images.pexels.com/photos/3680912/pexels-photo-3680912.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&dpr=1" />
+			<div class="gradient-container-bottom"></div>
+		</div>
+		<section class="section is-small">
+			<h1 class="title is-3 has-text-centered">Our top locations</h1>
+			<div class="container is-fluid is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-around">
+				<app-home-card
+					cardTitle="Alhambra Palace Hotel"
+					cardSubTitle="Al Ain, Abu Dhabi, UAE"
+					imgUrl="https://images.pexels.com/photos/3680912/pexels-photo-3680912.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&dpr=1"
+					url="/hotels/middle-east/alhambra-palace"></app-home-card>
+				<app-home-card
+					imgUrl="https://images.pexels.com/photos/14741183/pexels-photo-14741183.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&dpr=1"
+					cardTitle="Desert Oasis Resort & Spa"
+					cardSubTitle="Dubai, UAE"
+					url="/hotels/middle-east/desert-oasis-resort"></app-home-card>
+				<app-home-card
+					imgUrl="https://images.pexels.com/photos/12131657/pexels-photo-12131657.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&dpr=1"
+					cardTitle="
+                The Castle Inn"
+					cardSubTitle="England"
+					url="/hotels/europe/castle-inn"></app-home-card>
+			</div>
+		</section>
+	</div>
 </app-layout>

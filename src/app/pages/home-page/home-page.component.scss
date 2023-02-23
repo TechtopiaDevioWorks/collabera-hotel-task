@@ -1,0 +1,74 @@
+.banner-container {
+	padding: 0;
+	position: relative;
+    display: flex;
+    width: 100vw;
+
+	.gradient-container-top {
+		background: linear-gradient(180deg, #fff, transparent 84%);
+		position: absolute;
+		top: 0;
+		height: 30%;
+		width: 100%;
+	}
+	.gradient-container-bottom {
+        background: linear-gradient(180deg,#fff,transparent 84%);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+		position: absolute;
+		bottom: 0;
+		height: 30%;
+		width: 100%;
+	}
+	img {
+		height: auto;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+    .information-container {
+		padding: 5%;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translate(0, -50%);
+		right: 0;
+		width: 50%;
+		height: 50%;
+        -webkit-text-stroke: 0.05vw black;
+
+		.information-title {
+			font-size: 5vw;
+            font-weight: 500;
+            line-height: 4vw;
+            margin-left: -1vw;
+            color: #d8817f;
+		}
+		
+	}
+
+}
+
+@media screen and (max-width: 1023px) {
+    .information-container {
+        padding: 5%;
+		position: absolute;
+		top: 5%;
+		left: 0;
+		right: 0 ;
+		width: 75% ;
+		height: 75% ;
+        margin:auto;
+        -webkit-text-stroke: 0.1vw black;
+		.information-title {
+			font-size: 8vw;
+            font-weight: 500;
+            line-height: 7vw;
+            margin-left: -1vw;
+            color: #d8817f;
+		}
+		
+
+	}
+}
