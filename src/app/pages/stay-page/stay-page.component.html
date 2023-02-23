@@ -1,4 +1,6 @@
 <app-layout>
+    <div class="container is-fluid is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-around">
+
     <ng-container *ngFor="let item of currentStayData?.info;let odd=odd">
         <app-discover-more-container
             [textLocation]="odd ? 'left': 'right'"
@@ -7,4 +9,5 @@
             [heading]="item.heading"
             [description]="item.description"></app-discover-more-container>
     </ng-container>
+    </div>
 </app-layout>

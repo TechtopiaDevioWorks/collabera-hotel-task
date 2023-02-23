@@ -81,8 +81,7 @@
                 <div class="control">
                     <div class="select">
                     <select formControlName="hotel">
-                        <option>Select dropdown</option>
-                        <option>With options</option>
+                        <option *ngFor="let item of hotelList" [value]="item.value">{{item.title}}</option>
                     </select>
                     </div>
                 </div>
@@ -92,8 +91,7 @@
                 <div class="control">
                     <div class="select">
                     <select formControlName="room">
-                        <option>Select dropdown</option>
-                        <option>With options</option>
+                        <option *ngFor="let item of roomList" [value]="item.value">{{item.title}}</option>
                     </select>
                     </div>
                 </div>
@@ -101,7 +99,7 @@
             <div class="field">
                 <label class="label">Date range</label>
                 <div class="control has-icons-left">
-                    <mat-date-range-input [rangePicker]="picker" [formGroup]="reserveForm" class="input" [min]="minDate">
+                    <mat-date-range-input [rangePicker]="picker" formGroupName="dateRange" class="input" [min]="minDate" [dateFilter]="dateFilter">
                         <input matStartDate formControlName="startDate" placeholder="Start Date">
                         <input matEndDate formControlName="endDate" placeholder="End Date">
                     </mat-date-range-input>

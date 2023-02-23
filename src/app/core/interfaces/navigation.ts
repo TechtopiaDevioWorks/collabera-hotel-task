@@ -13,3 +13,8 @@ export interface RoutingButton {
     url: string;
     urlParams?:Params;
 }
+
+export interface DropdownValue {
+    title: string;
+    value: string;
+}

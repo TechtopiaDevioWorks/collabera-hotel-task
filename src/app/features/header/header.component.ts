@@ -61,7 +61,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
 		{ title: 'Contact', icon: 'fa-solid fa-envelope', url: '/contact' },
 		{ title: 'Carrers', icon: 'fa-solid fa-briefcase', url: '/carrers' },
 		{ title: 'Reserve now', icon: 'fa-solid fa-bookmark', url: '/reserve' },
-		{ title: 'Booking info', icon: 'fa-solid fa-receipt', url: '/booking' },
 	];
 	mobileNavigationState = false;
 	ngOnInit(): void {

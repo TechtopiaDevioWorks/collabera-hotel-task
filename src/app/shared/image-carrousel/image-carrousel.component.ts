@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageCarrouselComponent implements OnInit {
   slideIndex = 0;
-
+  slideArray = 0;
   constructor() {}
 
   ngOnInit(): void {

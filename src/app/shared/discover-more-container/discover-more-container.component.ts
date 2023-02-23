@@ -7,7 +7,7 @@ import { Input } from '@angular/core';
 	styleUrls: ['./discover-more-container.component.scss'],
 })
 export class DiscoverMoreContainerComponent {
-	@Input() textLocation: 'right' | 'left' | 'middle' = 'right';
+	@Input() textLocation: 'right' | 'left' | 'middle' | 'middle-overlay'= 'right';
 	@Input() overheading: string | undefined;
 	@Input() heading: string | undefined;
 	@Input() subheading: string | undefined;

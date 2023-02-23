@@ -15,7 +15,7 @@
 		<div class="content mt-auto">
 			<p class="card-text has-text-centered has-text-weight-semibold">
                 <span class="mr-1">Regular price: </span>
-                <span style="text-decoration: line-through;" class="has-text-danger">{{ description2Old }}</span>
+                <span style="text-decoration: line-through;" class="has-text-danger">$ {{ description2Old }}</span>
             </p>
 		</div>
 	</div>
@@ -23,7 +23,7 @@
 		<div class="content mt-auto">
 			<p class="card-text has-text-centered has-text-weight-semibold">
                 <span class="mr-1">Offer price:</span>
-                <span class="has-text-primary">{{ description2 }}
+                <span class="has-text-primary">$ {{ description2 }}
                 </span>
                 </p>
 		</div>
@@ -31,7 +31,7 @@
 
 	<footer class="card-footer" *ngIf="buttons" [class.mt-auto]="!description2">
 		<ng-container *ngFor="let item of buttons">
-			<a [routerLink]="item.url" class="card-footer-item">{{ item.text }}</a>
+			<a [routerLink]="item.url" [queryParams]="item.urlParams" class="card-footer-item">{{ item.text }}</a>
 		</ng-container>
 	</footer>
 </div>

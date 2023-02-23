@@ -10,4 +10,12 @@ export interface MinStayData {
 
 export interface StayData extends MinStayData {
     info: DiscoverMore[]
+    rooms?: RoomData[]
+}
+
+export interface RoomData {
+    room: string;
+    roomName: string;
+    description: string;
+    imgUrlList: string[];
 }

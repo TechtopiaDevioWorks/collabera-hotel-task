@@ -6,10 +6,11 @@ import { UserManagerService } from './services/user-manager.service';
 import { InfoService } from './services/info.service';
 import { OffersService } from './services/offers.service';
 import { CarrerService } from './services/carrer.service';
+import { BookingService } from './services/booking.service';
 
 @NgModule({
   imports: [CommonModule, ReactiveFormsModule, RouterModule],
   exports: [CommonModule, ReactiveFormsModule, RouterModule],
-  providers: [UserManagerService, InfoService, OffersService, CarrerService]
+  providers: [UserManagerService, InfoService, OffersService, CarrerService, BookingService]
 })
 export class CoreModule { }

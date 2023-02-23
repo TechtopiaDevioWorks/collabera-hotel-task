@@ -1,11 +1,14 @@
 <app-layout>
-<ng-container *ngFor="let item of currentHotelList;let odd=odd">
-    <app-discover-more-container
-        [textLocation]="odd ? 'left': 'right'"
-        [overheading]="item.overheading"
-        [imgUrl]="item.imgUrl"
-		[heading]="item.title" imgUrl="https://i.ibb.co/xHNwfmm/pexels-sergey-pesterev-8357638.jpg"
-		[buttonRoute]="item.route"
-        [description]="item.description"></app-discover-more-container>
-</ng-container>
+	<div class="container is-fluid is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-around">
+		<ng-container *ngFor="let item of currentHotelList; let odd = odd">
+			<app-discover-more-container
+				[textLocation]="odd ? 'left' : 'right'"
+				[overheading]="item.overheading"
+				[imgUrl]="item.imgUrl"
+				[heading]="item.title"
+				imgUrl="https://i.ibb.co/xHNwfmm/pexels-sergey-pesterev-8357638.jpg"
+				[buttonRoute]="item.route"
+				[description]="item.description"></app-discover-more-container>
+		</ng-container>
+	</div>
 </app-layout>
